@@ -5,7 +5,7 @@
 빌드 도구·프레임워크 없음 — HTML/CSS + 작은 vanilla JS(`app.js`, 스크롤 애니메이션).
 
 ```
-web/
+.
   index.html      Pointer 홈 — 히어로 + #about(우리가 일하는 방식) + #products(MADA 카드)
   mada.html       MADA 제품 페이지 (앱 소개 + 지원·약관 링크)
   support.html    고객 지원  (스토어 Support URL 대상)
@@ -14,7 +14,7 @@ web/
   location.html   위치기반서비스 이용약관
   styles.css
   app.js          로드/스크롤 진입 애니메이션, 헤더 스크롤 상태 (prefers-reduced-motion 존중)
-  assets/mada-logo.png   (frontend/assets/app/logo/mada-logo.png 사본)
+  assets/mada-logo.png   (pololo: frontend/assets/app/logo/mada-logo.png 사본)
 ```
 
 헤더: Pointer 페이지는 `● Pointer` 워드마크, MADA 계열 페이지는 `Pointer → [MADA 로고]`
@@ -24,16 +24,16 @@ web/
 ## 로컬 미리보기
 
 ```bash
-open web/index.html
+open index.html
 # 또는 (상대경로 확인용) — 포트 8002 이상
-cd web && python3 -m http.server 8002    # http://localhost:8002
+python3 -m http.server 8002    # http://localhost:8002
 ```
 
 ## 배포
 
-`pointer-mada.com` 연결까지 포함한 단계별 방법은 **[`DEPLOY.md`](DEPLOY.md)** 참고.
-요약: 빌드 없는 정적 파일이라 `web/` 디렉터리를 그대로 publish (Cloudflare Pages 권장,
-output directory `web`).
+`point-mada.com` 연결까지 포함한 단계별 방법은 **[`DEPLOY.md`](DEPLOY.md)** 참고.
+요약: 빌드 없는 정적 파일이라 레포 루트를 그대로 publish (Cloudflare Pages 권장,
+output directory `/`).
 
 ## 제출 전 채워야 할 것 (TODO)
 
@@ -44,8 +44,8 @@ output directory `web`).
 - 시행일자 `2026년 8월 30일` → 실제 시행일
 - **Pointer 홈(index.html) 소개 문구** — 현재 임시 문구, 실제 팀 소개로 교체
 
-약관 본문은 `frontend/src/constants/legal.ts`의 `LEGAL_TEXTS` 국문 초안과 같은 내용이다.
-한쪽을 고치면 다른 쪽도 같이 갱신한다.
+약관 본문은 pololo 레포 `frontend/src/constants/legal.ts`의 `LEGAL_TEXTS` 국문 초안과
+같은 내용이다. 레포가 분리돼 있으니 한쪽을 고치면 다른 쪽도 수동으로 같이 갱신한다.
 
 ## Next.js로 갈 시점
 
