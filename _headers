@@ -1,0 +1,7 @@
+# Cloudflare Pages — HTML/CSS/JS는 매번 재검증(자주 바뀌는 사이트), 이미지는 캐시 유지
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/*.css
+  Cache-Control: public, max-age=0, must-revalidate
+/*.js
+  Cache-Control: public, max-age=0, must-revalidate
