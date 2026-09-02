@@ -20,7 +20,10 @@ body {
   background: var(--bg);
   color: var(--fg);
   -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
 }
+
+img { max-width: 100%; height: auto; }
 
 /* ---------- nav ---------- */
 .nav {
@@ -73,8 +76,19 @@ body {
   text-decoration: underline;
   text-underline-offset: 6px;
 }
-@media (max-width: 640px) {
-  .nav__links { gap: 16px; font-size: 13px; }
+@media (max-width: 620px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 14px 20px;
+  }
+  .nav__left { width: 100%; justify-content: space-between; }
+  .nav__links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 14px;
+  }
 }
 
 /* ---------- sections ---------- */
@@ -202,6 +216,15 @@ h2 {
 .modal__info { min-width: 0; }
 @media (max-width: 760px) {
   .modal__body { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .section { padding: 120px 22px 72px; }
+  .modal__panel {
+    margin: 14px;
+    padding: 44px 20px 28px;
+    border-radius: 20px;
+  }
+  .modal__close { top: 12px; right: 12px; }
 }
 
 /* ---------- carousel (버튼 슬라이드 + 하단 마커) ---------- */
