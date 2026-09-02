@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>POINTER —> Products</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__left">
+    <a class="nav__brand" href="index.en.html">POINTER</a>
+    <div class="nav__lang">
+      <a href="products.html">한국어</a><span>/</span><a href="products.en.html" aria-current="page">English</a>
+    </div>
+  </div>
+  <div class="nav__links">
+    <a href="index.en.html">About</a>
+    <a href="story.en.html">Story</a>
+    <a href="products.en.html" aria-current="page">Products</a>
+    <a href="contact.en.html">Contact</a>
+  </div>
+</nav>
+
+<section class="section">
+  <h1 class="shop-title">Shop Products<br />(placeholder)</h1>
+  <button class="logo-card" type="button" id="madaCard">
+    <img class="logo-img" src="mada-logo.png" alt="Mada" />
+  </button>
+</section>
+
+<div class="modal" id="madaModal" aria-hidden="true">
+  <div class="modal__panel">
+    <button class="modal__close" id="modalClose" type="button" aria-label="Close">×</button>
+    <img class="modal__logo" src="mada-logo.png" alt="Mada" />
+    <div class="modal__body">
+      <div class="carousel" id="madaCarousel">
+        <div class="carousel__viewport">
+          <div class="carousel__track">
+            <img loading="lazy" src="app-1.png" alt="Mada app — onboarding" />
+            <img loading="lazy" src="app-2.png" alt="Mada app — location & notification permission" />
+            <img loading="lazy" src="app-3.png" alt="Mada app — log in" />
+            <img loading="lazy" src="app-4.png" alt="Mada app — sign up" />
+            <img loading="lazy" src="app-5.png" alt="Mada app — map with place capsules" />
+            <img loading="lazy" src="app-6.png" alt="Mada app — capsule marker map" />
+            <img loading="lazy" src="app-7.png" alt="Mada app — landmark info" />
+            <img loading="lazy" src="app-8.png" alt="Mada app — landmark collection" />
+            <img loading="lazy" src="app-9.png" alt="Mada app — my capsules drawer" />
+            <img loading="lazy" src="app-10.png" alt="Mada app — profile & settings" />
+            <img loading="lazy" src="app-11.png" alt="Mada app — permission settings" />
+            <img loading="lazy" src="app-12.png" alt="Mada app — language settings" />
+          </div>
+        </div>
+        <button class="carousel__nav carousel__nav--prev" type="button" aria-label="Previous">&lsaquo;</button>
+        <button class="carousel__nav carousel__nav--next" type="button" aria-label="Next">&rsaquo;</button>
+        <div class="carousel__dots"></div>
+      </div>
+      <div class="modal__info">
+        <ul class="features">
+          <li class="feature">
+            <span class="feature__icon"><img src="location-everyone.png" alt="" /></span>
+            <span class="feature__text"><b>Location-verified capsules</b><span>You have to be at the spot to leave a capsule. Photos, notes and feelings, saved together.</span></span>
+          </li>
+          <li class="feature">
+            <span class="feature__icon"><img src="clock.png" alt="" /></span>
+            <span class="feature__text"><b>A time capsule that opens later</b><span>When the set time comes, the capsule opens right over that place and the memory continues.</span></span>
+          </li>
+          <li class="feature">
+            <span class="feature__icon"><img src="mode-together.png" alt="" /></span>
+            <span class="feature__text"><b>Solo, or with friends</b><span>Write alone, or invite friends to seal a capsule together.</span></span>
+          </li>
+          <li class="feature">
+            <span class="feature__icon"><img src="place-map.png" alt="" /></span>
+            <span class="feature__text"><b>Discover on the map</b><span>See nearby capsules as map markers, and how many each place holds.</span></span>
+          </li>
+          <li class="feature">
+            <span class="feature__icon"><img src="anywhere.png" alt="" /></span>
+            <span class="feature__text"><b>Landmark collection</b><span>Collect landmarks as snow globes and browse place information alongside.</span></span>
+          </li>
+          <li class="feature">
+            <span class="feature__icon"><img src="bell.png" alt="" /></span>
+            <span class="feature__text"><b>Likes · alerts · 5 languages</b><span>Like capsules and get friend-request and capsule-opening alerts. Korean, English, 繁體中文, 简体中文, 日本語.</span></span>
+          </li>
+        </ul>
+
+        <div class="policies">
+      <details class="policy">
+        <summary>Privacy Policy</summary>
+<div class="policy__body">Mada Privacy Policy
+
+* The Korean version of this Privacy Policy is the original. This English translation is provided for reference only.
+
+Pointer ("the Company") establishes and discloses the following Privacy Policy pursuant to Article 30 of the Personal Information Protection Act, in order to protect the personal information of data subjects and to handle related grievances promptly and smoothly.
+
+Article 1 (Items of Personal Information Collected and Collection Methods)
+The Company collects the following personal information for membership registration and service provision.
+1. Items collected: nickname, gender, age group, place of residence, push notification token (Device Token)
+2. Collection methods: direct entry by the user at sign-up, and automatic collection while using the service
+
+Article 2 (Purpose of Collection and Use of Personal Information)
+1. Member management: identity verification for service use, personal identification, and prevention of fraudulent use by delinquent members
+2. Service provision: personalized profile, and age/region-based content recommendations
+3. Marketing and notifications: sending major service announcements and push notifications
+
+Article 3 (Retention and Use Period of Personal Information)
+1. In principle, a member's personal information is retained and used until membership withdrawal, and is destroyed without delay upon a withdrawal request.
+2. However, where retention is required by applicable laws, personal information is retained for the period prescribed by those laws.
+3. Upon withdrawal, personal information that can identify the member (such as nickname and email) is destroyed without delay; however, content created by the user (capsules) may continue to be retained within the service after being anonymized so that the author cannot be identified.
+
+Article 4 (Provision of Personal Information to Third Parties and Entrustment)
+1. The Company does not provide personal information to external parties without the user's consent.
+2. The Company entrusts the processing of personal information as follows for smooth delivery of push notifications.
+   - Entrusted companies: Apple Inc. / Google LLC (FCM)
+   - Entrusted work: delivery of app push notification messages
+
+Article 5 (Rights of Users and How to Exercise Them)
+1. Users may at any time withdraw their consent to the collection and use of personal information (i.e., withdraw membership) through the [Settings &gt; Delete Account / Withdraw Membership] menu in the app.
+2. Users may at any time view or modify their registered personal information.
+
+Article 6 (Personal Information Protection Officer and Contact)
+- Name: Pointer
+- Email: mada.pointer@gmail.com
+
+Effective date: September 1, 2026</div>
+      </details>
+
+      <details class="policy">
+        <summary>Terms of Service</summary>
+<div class="policy__body">Mada Terms of Service
+
+* The Korean version of these Terms of Service is the original. This English translation is provided for reference only.
+
+Article 1 (Purpose)
+These Terms set forth the conditions and procedures for use of the Mada service ("the Service") provided by Pointer ("the Company"), and the rights, obligations, and responsibilities between the Company and members.
+
+Article 2 (Definitions)
+1. "Service" means the Mada app and all related services provided by the Company.
+2. "User" means a member or non-member who uses the Service provided by the Company under these Terms.
+3. "Member" means a person who has provided personal information to the Service and completed member registration, and who may continuously receive the Company's information and use the Service on an ongoing basis.
+
+Article 3 (Effect and Amendment of the Terms)
+1. These Terms take effect by being posted on the Service screen or otherwise notified to users.
+2. The Company may amend these Terms within the scope not violating applicable laws, and in the event of an amendment, shall give notice through the in-app notices from seven days before the effective date.
+
+Article 4 (Account and Use of the Service)
+1. Membership is concluded when a user agrees to the Terms, completes the registration form prescribed by the Company, and applies for registration.
+2. A user may not register by misappropriating another person's information, and has a duty to keep their own information accurate.
+3. A member may request withdrawal at any time through the in-app menu, and the Company shall process it immediately.
+
+Article 5 (Obligations of the Company)
+1. The Company shall not engage in acts prohibited by applicable laws or these Terms or contrary to public order and morals, and shall use its best efforts to provide the Service continuously and stably.
+2. The Company shall maintain a security system to protect users' personal information and shall comply with its Privacy Policy.
+
+Article 6 (Obligations of Users)
+Users shall not do any of the following.
+1. Misappropriating another person's information or entering false information
+2. Altering information posted by the Company or interfering with the normal operation of the Service
+3. Collecting or distributing other users' personal information
+4. Infringing third parties' intellectual property rights such as copyrights, or damaging their reputation
+
+Article 7 (Modification and Suspension of the Service)
+1. The Company may temporarily suspend provision of the Service in the event of maintenance, replacement, or breakdown of information and communication facilities such as computers, or interruption of communications.
+2. The Company may modify or discontinue all or part of the Service as required for operational or technical reasons, in which case it shall give prior notice through the in-app notices.
+
+Article 8 (Disclaimer)
+1. The Company is exempted from responsibility for providing the Service where it cannot provide the Service due to a natural disaster or equivalent force majeure.
+2. The Company is not responsible for any impairment of Service use due to reasons attributable to the user.
+3. The Company is not responsible for the user's failure to obtain, or loss of, expected profits through use of the Service.
+
+Article 9 (Governing Law and Jurisdiction)
+1. Litigation regarding disputes between the Company and users shall be governed by the laws of the Republic of Korea.
+2. If a lawsuit is filed over a dispute arising from use of the Service, the court having jurisdiction over the location of the Company's head office shall be the exclusive competent court.
+
+Effective date: September 1, 2026</div>
+      </details>
+
+      <details class="policy">
+        <summary>Location-Based Services Terms</summary>
+<div class="policy__body">Mada Location-Based Services Terms
+
+* The Korean version of these Terms is the original. This English translation is provided for reference only.
+
+Article 1 (Purpose)
+These Terms set forth the rights, obligations, and responsibilities of the Company and the personal location information subject in using location information in the Mada service provided by Pointer ("the Company").
+
+Article 2 (Collection of Location Information and Service Description)
+1. The Company uses users' location information to provide "personalized content based on the user's location and recommendations of nearby information."
+2. Users' location information is collected via GPS and networks (Wi-Fi, mobile networks) while the app is running and when location permission is granted.
+
+Article 3 (Retention and Use Period of Personal Location Information)
+1. The Company retains and uses personal location information for the minimum period necessary to provide location-based services.
+2. It is destroyed immediately after the location information is provided, and related records are deleted without delay upon membership withdrawal. However, records confirming the collection, use, and provision of location information under the Act on the Protection and Use of Location Information are retained for the period prescribed by that Act.
+
+Article 4 (Rights of the Personal Location Information Subject)
+1. Users may at any time withdraw all or part of their consent to the collection and use of location information (by disabling location access in the device's settings menu).
+2. Users may at any time request to view and be notified of records confirming the collection, use, and provision of personal location information.
+
+Article 5 (Location Information Manager)
+- Name: Pointer
+- Contact / Email: mada.pointer@gmail.com
+
+Effective date: September 1, 2026</div>
+      </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var modal = document.getElementById("madaModal");
+    var card = document.getElementById("madaCard");
+    var close = document.getElementById("modalClose");
+
+    function setOpen(open) {
+      modal.classList.toggle("open", open);
+      modal.setAttribute("aria-hidden", String(!open));
+      document.body.style.overflow = open ? "hidden" : "";
+    }
+
+    card.addEventListener("click", function () { setOpen(true); });
+    close.addEventListener("click", function () { setOpen(false); });
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) setOpen(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") setOpen(false);
+    });
+
+    // carousel — slide sideways with buttons + bottom markers
+    var carousel = document.getElementById("madaCarousel");
+    var track = carousel.querySelector(".carousel__track");
+    var slides = track.children;
+    var dotsWrap = carousel.querySelector(".carousel__dots");
+    var index = 0;
+
+    for (var i = 0; i < slides.length; i++) {
+      var dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "carousel__dot";
+      dot.setAttribute("aria-label", "Screen " + (i + 1));
+      dot.dataset.i = i;
+      dotsWrap.appendChild(dot);
+    }
+
+    function render() {
+      track.style.transform = "translateX(" + -index * 100 + "%)";
+      var dots = dotsWrap.children;
+      for (var j = 0; j < dots.length; j++) {
+        dots[j].classList.toggle("is-active", j === index);
+      }
+    }
+    function go(delta) {
+      index = (index + delta + slides.length) % slides.length;
+      render();
+    }
+
+    carousel.querySelector(".carousel__nav--prev").addEventListener("click", function () { go(-1); });
+    carousel.querySelector(".carousel__nav--next").addEventListener("click", function () { go(1); });
+    dotsWrap.addEventListener("click", function (e) {
+      if (e.target.dataset.i) { index = +e.target.dataset.i; render(); }
+    });
+    render();
+  })();
+</script>
+
+</body>
+</html>

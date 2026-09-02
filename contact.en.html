@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>POINTER —> Contact</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__left">
+    <a class="nav__brand" href="index.en.html">POINTER</a>
+    <div class="nav__lang">
+      <a href="contact.html">한국어</a><span>/</span><a href="contact.en.html" aria-current="page">English</a>
+    </div>
+  </div>
+  <div class="nav__links">
+    <a href="index.en.html">About</a>
+    <a href="story.en.html">Story</a>
+    <a href="products.en.html">Products</a>
+    <a href="contact.en.html" aria-current="page">Contact</a>
+  </div>
+</nav>
+
+<section class="section">
+  <h1 class="shop-title">How can we help?</h1>
+  <button class="logo-card" type="button" id="madaCard">
+    <img class="logo-img" src="mada-logo.png" alt="Mada" />
+  </button>
+  <p class="contact-hint">Pick a product to open its FAQ</p>
+</section>
+
+<div class="modal modal--faq" id="madaModal" aria-hidden="true">
+  <div class="modal__panel">
+    <button class="modal__close" id="modalClose" type="button" aria-label="Close">×</button>
+    <img class="modal__logo" src="mada-logo.png" alt="Mada" />
+    <p class="modal__sub">Frequently asked questions</p>
+
+    <h4 class="faq__cat">Capsules</h4>
+    <div class="policies">
+      <details class="policy"><summary>How do I write a capsule?</summary>
+<div class="policy__body">Pick a place on the map, then add photos and text to create a capsule. Once you finish writing and seal it, the capsule is saved at that place.</div></details>
+      <details class="policy"><summary>Where can I write a capsule?</summary>
+<div class="policy__body">You can write one at your current location or at a place you've visited on the map. Your location must be verified before you can seal a capsule.</div></details>
+      <details class="policy"><summary>When can I open a capsule?</summary>
+<div class="policy__body">A capsule with no lock can be opened as soon as it's sealed. A locked capsule opens once the date or condition you set is met.</div></details>
+      <details class="policy"><summary>Can I edit or delete a capsule I wrote?</summary>
+<div class="policy__body">You can edit it freely before sealing. Once sealed, the content can't be changed, but you can delete it from the capsule detail screen.</div></details>
+      <details class="policy"><summary>Can I write a capsule together with friends?</summary>
+<div class="policy__body">Yes — invite friends while creating a capsule to make a friend capsule that everyone can write in together. Invited friends can join once they accept.</div></details>
+      <details class="policy"><summary>Until when can friends add entries to a friend capsule?</summary>
+<div class="policy__body">Everyone can add or edit entries until the host seals the capsule. Once the host seals it, the content can no longer be changed.</div></details>
+      <details class="policy"><summary>Can other people see my capsules?</summary>
+<div class="policy__body">Capsules set to public can be seen by other users on the map and in the archive. Private capsules can only be seen by you and its participants.</div></details>
+      <details class="policy"><summary>Can I set who can see a capsule?</summary>
+<div class="policy__body">Yes, you can choose public or private while writing. A private capsule only shows its location on the map — its content is visible only to you and its participants.</div></details>
+      <details class="policy"><summary>How do I lock a capsule?</summary>
+<div class="policy__body">Turn on the lock in the writing screen and set the date it should open. The capsule can't be opened before that date.</div></details>
+      <details class="policy"><summary>When does a locked capsule open?</summary>
+<div class="policy__body">It unlocks automatically and becomes viewable once the date you set while writing it arrives.</div></details>
+      <details class="policy"><summary>What are the conditions for a capsule to open?</summary>
+<div class="policy__body">An unlocked capsule opens as soon as it's sealed; a locked one opens once its set date has passed. A friend capsule is complete once every participant has written an entry and the host has sealed it.</div></details>
+    </div>
+
+    <h4 class="faq__cat">Map &amp; Places</h4>
+    <div class="policies">
+      <details class="policy"><summary>How are the places shown on the map chosen?</summary>
+<div class="policy__body">Places are selected based on public data such as tourist attractions and landmarks. You can write capsules centered around these places.</div></details>
+      <details class="policy"><summary>How does place verification work?</summary>
+<div class="policy__body">When you seal a capsule, your location is automatically verified if you're near that place. You need to allow location permission to verify.</div></details>
+      <details class="policy"><summary>I arrived at the place but verification isn't working.</summary>
+<div class="policy__body">Verification may fail if location permission is off or GPS signal is weak. Please allow location permission in settings and try again outdoors.</div></details>
+    </div>
+
+    <h4 class="faq__cat">Archive</h4>
+    <div class="policies">
+      <details class="policy"><summary>What is the tourist spot archive?</summary>
+<div class="policy__body">It's a record that collects the places where you've left capsules. As you visit more places, your archive fills up along with it.</div></details>
+      <details class="policy"><summary>How can I check the places I've visited?</summary>
+<div class="policy__body">In the Archive tab, you can see the list and count of places where you've written capsules so far.</div></details>
+    </div>
+
+    <h4 class="faq__cat">Account</h4>
+    <div class="policies">
+      <details class="policy"><summary>Can I change my nickname or profile?</summary>
+<div class="policy__body">You can change your nickname and profile image anytime from the account screen.</div></details>
+      <details class="policy"><summary>How do I manage notifications?</summary>
+<div class="policy__body">Go to Account &gt; Settings to check and change notification permission. If you've already denied it, you'll need to allow it directly in your device settings.</div></details>
+      <details class="policy"><summary>Where can I get help if I run into a problem?</summary>
+<div class="policy__body">Reach out through Account &gt; Support &gt; "Send feedback to the developer," and we'll get back to you after checking.</div></details>
+      <details class="policy"><summary>How do I delete my account?</summary>
+<div class="policy__body">You can do this from the Delete Account menu at the bottom of Account &gt; Settings. Capsules and records can't be recovered once deleted.</div></details>
+    </div>
+
+    <div class="faq__contact">
+      <h4 class="faq__cat">Other inquiries</h4>
+      <p>If you didn't find your answer here, reach us by email.</p>
+      <a class="modal__cta" href="mailto:mada.pointer@gmail.com">Email us</a>
+      <p class="faq__email">mada.pointer@gmail.com</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var modal = document.getElementById("madaModal");
+    var card = document.getElementById("madaCard");
+    var close = document.getElementById("modalClose");
+
+    function setOpen(open) {
+      modal.classList.toggle("open", open);
+      modal.setAttribute("aria-hidden", String(!open));
+      document.body.style.overflow = open ? "hidden" : "";
+    }
+
+    card.addEventListener("click", function () { setOpen(true); });
+    close.addEventListener("click", function () { setOpen(false); });
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) setOpen(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") setOpen(false);
+    });
+  })();
+</script>
+
+</body>
+</html>

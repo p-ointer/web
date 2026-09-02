@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>POINTER —> 문의</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__left">
+    <a class="nav__brand" href="index.html">POINTER</a>
+    <div class="nav__lang">
+      <a href="#" aria-current="page">한국어</a><span>/</span><a href="contact.en.html">English</a>
+    </div>
+  </div>
+  <div class="nav__links">
+    <a href="index.html">소개</a>
+    <a href="story.html">스토리</a>
+    <a href="products.html">제품</a>
+    <a href="contact.html" aria-current="page">문의</a>
+  </div>
+</nav>
+
+<section class="section">
+  <h1 class="shop-title">무엇을 도와드릴까요?</h1>
+  <button class="logo-card" type="button" id="madaCard">
+    <img class="logo-img" src="mada-logo.png" alt="마다" />
+  </button>
+  <p class="contact-hint">제품을 선택하면 자주 묻는 질문이 열려요</p>
+</section>
+
+<div class="modal modal--faq" id="madaModal" aria-hidden="true">
+  <div class="modal__panel">
+    <button class="modal__close" id="modalClose" type="button" aria-label="닫기">×</button>
+    <img class="modal__logo" src="mada-logo.png" alt="마다" />
+    <p class="modal__sub">자주 묻는 질문</p>
+
+    <h4 class="faq__cat">캡슐</h4>
+    <div class="policies">
+      <details class="policy"><summary>캡슐은 어떻게 작성하나요?</summary>
+<div class="policy__body">지도에서 원하는 장소를 선택한 뒤 사진과 글을 담아 캡슐을 작성할 수 있어요. 작성을 마치고 봉인하면 캡슐이 그 장소에 저장돼요.</div></details>
+      <details class="policy"><summary>캡슐은 어디에서 작성할 수 있나요?</summary>
+<div class="policy__body">현재 위치 또는 지도에서 방문한 적 있는 장소에서 작성할 수 있어요. 위치 인증이 되어야 캡슐을 봉인할 수 있어요.</div></details>
+      <details class="policy"><summary>캡슐은 언제 열어볼 수 있나요?</summary>
+<div class="policy__body">잠금을 설정하지 않은 캡슐은 봉인 즉시 열어볼 수 있어요. 잠금을 설정한 캡슐은 정해둔 날짜나 조건이 충족돼야 열려요.</div></details>
+      <details class="policy"><summary>작성한 캡슐을 수정하거나 삭제할 수 있나요?</summary>
+<div class="policy__body">봉인 전에는 자유롭게 수정할 수 있어요. 봉인한 뒤에는 내용을 수정할 수 없고, 삭제는 캡슐 상세 화면에서 가능해요.</div></details>
+      <details class="policy"><summary>친구와 함께 캡슐을 작성할 수 있나요?</summary>
+<div class="policy__body">네, 캡슐 작성 시 친구를 초대하면 함께 글을 남길 수 있는 친구 캡슐을 만들 수 있어요. 초대받은 친구가 수락하면 참여할 수 있어요.</div></details>
+      <details class="policy"><summary>친구 캡슐은 언제까지 글을 추가할 수 있나요?</summary>
+<div class="policy__body">호스트가 캡슐을 봉인하기 전까지 참여자 모두 글을 추가하거나 수정할 수 있어요. 호스트가 봉인하면 더 이상 내용을 바꿀 수 없어요.</div></details>
+      <details class="policy"><summary>내 캡슐을 다른 사람이 볼 수 있나요?</summary>
+<div class="policy__body">공개로 설정한 캡슐은 지도와 도감에서 다른 사용자도 볼 수 있어요. 비공개로 설정하면 나와 캡슐 참여자만 볼 수 있어요.</div></details>
+      <details class="policy"><summary>캡슐의 공개 범위를 설정할 수 있나요?</summary>
+<div class="policy__body">네, 작성 중 공개·비공개를 선택할 수 있어요. 비공개 캡슐은 지도에 위치만 표시되고 내용은 나와 참여자에게만 보여요.</div></details>
+      <details class="policy"><summary>캡슐은 어떻게 잠그나요?</summary>
+<div class="policy__body">작성 화면에서 잠금을 켜고 열리는 날짜를 지정하면 돼요. 지정한 날짜가 되기 전까지는 캡슐을 열어볼 수 없어요.</div></details>
+      <details class="policy"><summary>잠긴 캡슐은 언제 열리나요?</summary>
+<div class="policy__body">캡슐을 작성할 때 지정한 날짜가 되면 자동으로 잠금이 풀려 열어볼 수 있어요.</div></details>
+      <details class="policy"><summary>캡슐이 열리는 조건은 무엇인가요?</summary>
+<div class="policy__body">잠금이 없는 캡슐은 봉인 즉시, 잠긴 캡슐은 지정한 날짜가 지나야 열려요. 친구 캡슐은 모든 참여자가 글을 남기고 호스트가 봉인해야 완성돼요.</div></details>
+    </div>
+
+    <h4 class="faq__cat">지도 · 장소</h4>
+    <div class="policies">
+      <details class="policy"><summary>지도에 표시되는 장소는 어떤 기준으로 선정되나요?</summary>
+<div class="policy__body">관광지, 명소 등 공공 데이터를 기반으로 선정된 장소들이 지도에 표시돼요. 이 장소들을 중심으로 캡슐을 작성할 수 있어요.</div></details>
+      <details class="policy"><summary>장소 인증은 어떻게 하나요?</summary>
+<div class="policy__body">캡슐을 봉인할 때 현재 위치가 해당 장소와 가까우면 자동으로 위치가 인증돼요. 위치 권한을 허용해야 인증할 수 있어요.</div></details>
+      <details class="policy"><summary>장소에 도착했는데 인증이 되지 않아요.</summary>
+<div class="policy__body">위치 권한이 꺼져 있거나 GPS 신호가 약하면 인증이 안 될 수 있어요. 설정에서 위치 권한을 허용하고, 실외에서 다시 시도해 주세요.</div></details>
+    </div>
+
+    <h4 class="faq__cat">도감</h4>
+    <div class="policies">
+      <details class="policy"><summary>관광지 도감은 무엇인가요?</summary>
+<div class="policy__body">내가 캡슐을 남긴 장소들을 모아 볼 수 있는 기록이에요. 방문한 장소가 늘어날수록 도감도 함께 채워져요.</div></details>
+      <details class="policy"><summary>방문한 관광지는 어떻게 확인할 수 있나요?</summary>
+<div class="policy__body">도감 탭에서 지금까지 캡슐을 작성한 장소 목록과 개수를 확인할 수 있어요.</div></details>
+    </div>
+
+    <h4 class="faq__cat">계정</h4>
+    <div class="policies">
+      <details class="policy"><summary>닉네임이나 프로필을 변경할 수 있나요?</summary>
+<div class="policy__body">내 정보 화면에서 닉네임과 프로필 이미지를 언제든 변경할 수 있어요.</div></details>
+      <details class="policy"><summary>알림은 어떻게 설정하나요?</summary>
+<div class="policy__body">내 정보 &gt; 설정에서 알림 권한을 확인하고 변경할 수 있어요. 이미 거부한 경우 기기 설정에서 직접 허용해야 해요.</div></details>
+      <details class="policy"><summary>서비스 이용 중 문제가 생기면 어디에 문의하나요?</summary>
+<div class="policy__body">내 정보 &gt; 고객 지원의 "개발자에게 피드백 보내기"를 통해 문의해 주시면 확인 후 도와드릴게요.</div></details>
+      <details class="policy"><summary>회원 탈퇴는 어떻게 하나요?</summary>
+<div class="policy__body">내 정보 &gt; 설정 화면 하단의 회원탈퇴 메뉴에서 진행할 수 있어요. 탈퇴 시 작성한 캡슐과 기록은 복구할 수 없어요.</div></details>
+    </div>
+
+    <div class="faq__contact">
+      <h4 class="faq__cat">기타 문의</h4>
+      <p>여기에서 답을 찾지 못하셨다면 이메일로 문의해 주세요.</p>
+      <a class="modal__cta" href="mailto:mada.pointer@gmail.com">이메일로 문의하기</a>
+      <p class="faq__email">mada.pointer@gmail.com</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var modal = document.getElementById("madaModal");
+    var card = document.getElementById("madaCard");
+    var close = document.getElementById("modalClose");
+
+    function setOpen(open) {
+      modal.classList.toggle("open", open);
+      modal.setAttribute("aria-hidden", String(!open));
+      document.body.style.overflow = open ? "hidden" : "";
+    }
+
+    card.addEventListener("click", function () { setOpen(true); });
+    close.addEventListener("click", function () { setOpen(false); });
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) setOpen(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") setOpen(false);
+    });
+  })();
+</script>
+
+</body>
+</html>
