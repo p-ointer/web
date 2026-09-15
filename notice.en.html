@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>POINTER —> Notice</title>
+<link rel="stylesheet" href="styles.css?v=2" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__left">
+    <a class="nav__brand" href="index.en.html">POINTER</a>
+    <div class="nav__lang">
+      <a href="notice.html">한국어</a><span>/</span><a href="notice.en.html" aria-current="page">English</a>
+    </div>
+  </div>
+  <div class="nav__links">
+    <a href="index.en.html">About</a>
+    <a href="products.en.html">Products</a>
+    <a href="notice.en.html" aria-current="page">Notice</a>
+    <a href="contact.en.html">Contact</a>
+  </div>
+</nav>
+
+<section class="section">
+  <h1 class="shop-title">Notice</h1>
+  <button class="logo-card" type="button" id="madaCard">
+    <img class="logo-img" src="mada-logo.png" alt="Mada" />
+  </button>
+  <p class="contact-hint">Select a product to view its announcements</p>
+</section>
+
+<div class="modal modal--faq" id="madaModal" aria-hidden="true">
+  <div class="modal__panel">
+    <button class="modal__close" id="modalClose" type="button" aria-label="Close">×</button>
+    <div class="modal__head">
+      <img class="modal__logo" src="mada-logo.png" alt="Mada" />
+      <a class="store-badge-link" href="https://apps.apple.com/kr/app/mada-%EB%A7%88%EB%8B%A4/id6800627725" target="_blank" rel="noopener noreferrer">
+        <img class="store-badge" src="app-store-badge-en.svg" alt="Download on the App Store" />
+      </a>
+    </div>
+    <p class="modal__sub">Notice</p>
+
+    <div class="policies" id="noticeList">
+      <p class="notice-empty">No announcements yet.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var modal = document.getElementById("madaModal");
+    var card = document.getElementById("madaCard");
+    var close = document.getElementById("modalClose");
+
+    function updateHash(open) {
+      var base = location.pathname + location.search;
+      var url = open ? base + "#mada" : base;
+      if (location.hash !== (open ? "#mada" : "")) {
+        history.pushState(null, "", url);
+      }
+    }
+
+    function setOpen(open, syncUrl) {
+      modal.classList.toggle("open", open);
+      modal.setAttribute("aria-hidden", String(!open));
+      document.body.style.overflow = open ? "hidden" : "";
+      if (syncUrl !== false) updateHash(open);
+    }
+
+    card.addEventListener("click", function () { setOpen(true); });
+    close.addEventListener("click", function () { setOpen(false); });
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) setOpen(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") setOpen(false);
+    });
+    window.addEventListener("popstate", function () {
+      setOpen(location.hash === "#mada", false);
+    });
+
+    if (location.hash === "#mada") setOpen(true, false);
+  })();
+</script>
+
+</body>
+</html>

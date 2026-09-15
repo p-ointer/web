@@ -17,8 +17,8 @@
   </div>
   <div class="nav__links">
     <a href="index.en.html">About</a>
-    <a href="story.en.html">Story</a>
     <a href="products.en.html">Products</a>
+    <a href="notice.en.html">Notice</a>
     <a href="contact.en.html" aria-current="page">Contact</a>
   </div>
 </nav>
@@ -34,7 +34,12 @@
 <div class="modal modal--faq" id="madaModal" aria-hidden="true">
   <div class="modal__panel">
     <button class="modal__close" id="modalClose" type="button" aria-label="Close">×</button>
-    <img class="modal__logo" src="mada-logo.png" alt="Mada" />
+    <div class="modal__head">
+      <img class="modal__logo" src="mada-logo.png" alt="Mada" />
+      <a class="store-badge-link" href="https://apps.apple.com/kr/app/mada-%EB%A7%88%EB%8B%A4/id6800627725" target="_blank" rel="noopener noreferrer">
+        <img class="store-badge" src="app-store-badge-en.svg" alt="Download on the App Store" />
+      </a>
+    </div>
     <p class="modal__sub">Frequently asked questions</p>
 
     <h4 class="faq__cat">Capsules</h4>
@@ -108,10 +113,19 @@
     var card = document.getElementById("madaCard");
     var close = document.getElementById("modalClose");
 
-    function setOpen(open) {
+    function updateHash(open) {
+      var base = location.pathname + location.search;
+      var url = open ? base + "#mada" : base;
+      if (location.hash !== (open ? "#mada" : "")) {
+        history.pushState(null, "", url);
+      }
+    }
+
+    function setOpen(open, syncUrl) {
       modal.classList.toggle("open", open);
       modal.setAttribute("aria-hidden", String(!open));
       document.body.style.overflow = open ? "hidden" : "";
+      if (syncUrl !== false) updateHash(open);
     }
 
     card.addEventListener("click", function () { setOpen(true); });
@@ -122,6 +136,11 @@
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") setOpen(false);
     });
+    window.addEventListener("popstate", function () {
+      setOpen(location.hash === "#mada", false);
+    });
+
+    if (location.hash === "#mada") setOpen(true, false);
   })();
 </script>
 

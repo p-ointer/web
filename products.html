@@ -17,8 +17,8 @@
   </div>
   <div class="nav__links">
     <a href="index.html">소개</a>
-    <a href="story.html">스토리</a>
     <a href="products.html" aria-current="page">제품</a>
+    <a href="notice.html">공지</a>
     <a href="contact.html">문의</a>
   </div>
 </nav>
@@ -33,7 +33,12 @@
 <div class="modal" id="madaModal" aria-hidden="true">
   <div class="modal__panel">
     <button class="modal__close" id="modalClose" type="button" aria-label="닫기">×</button>
-    <img class="modal__logo" src="mada-logo.png" alt="마다" />
+    <div class="modal__head">
+      <img class="modal__logo" src="mada-logo.png" alt="마다" />
+      <a class="store-badge-link" href="https://apps.apple.com/kr/app/mada-%EB%A7%88%EB%8B%A4/id6800627725" target="_blank" rel="noopener noreferrer">
+        <img class="store-badge" src="app-store-badge-ko.svg" alt="App Store에서 다운로드" />
+      </a>
+    </div>
     <div class="modal__body">
       <div class="carousel" id="madaCarousel">
         <div class="carousel__viewport">
@@ -208,10 +213,19 @@ Pointer(이하 '회사'라 함)은(는) 「개인정보 보호법」 제30조에
     var card = document.getElementById("madaCard");
     var close = document.getElementById("modalClose");
 
-    function setOpen(open) {
+    function updateHash(open) {
+      var base = location.pathname + location.search;
+      var url = open ? base + "#mada" : base;
+      if (location.hash !== (open ? "#mada" : "")) {
+        history.pushState(null, "", url);
+      }
+    }
+
+    function setOpen(open, syncUrl) {
       modal.classList.toggle("open", open);
       modal.setAttribute("aria-hidden", String(!open));
       document.body.style.overflow = open ? "hidden" : "";
+      if (syncUrl !== false) updateHash(open);
     }
 
     card.addEventListener("click", function () { setOpen(true); });
@@ -222,6 +236,11 @@ Pointer(이하 '회사'라 함)은(는) 「개인정보 보호법」 제30조에
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") setOpen(false);
     });
+    window.addEventListener("popstate", function () {
+      setOpen(location.hash === "#mada", false);
+    });
+
+    if (location.hash === "#mada") setOpen(true, false);
 
     // carousel — 버튼으로 옆으로 넘기기 + 하단 마커
     var carousel = document.getElementById("madaCarousel");

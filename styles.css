@@ -298,12 +298,22 @@ h2 {
 }
 .modal__close:hover { background: #ddcfb4; }
 
+.modal__head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 0 0 4px;
+}
 .modal__logo {
   display: block;
   width: 132px;
   height: auto;
-  margin: 0 0 4px;
 }
+.modal__head .modal__logo { margin: 0; }
+.store-badge-link { display: inline-flex; line-height: 0; }
+.store-badge-link:hover { opacity: 0.8; }
+.store-badge { height: 44px; width: auto; display: block; }
 .modal__sub {
   font-size: 14px;
   color: var(--p-muted);
@@ -391,6 +401,14 @@ h2 {
 }
 .faq__contact p { font-size: 14px; color: var(--p-muted); line-height: 1.6; }
 .faq__email { margin-top: 10px; font-weight: 600; color: var(--p-fg); }
+
+/* ---------- notice (empty-state placeholder) ---------- */
+.notice-empty {
+  padding: 28px 0;
+  text-align: center;
+  font-size: 14px;
+  color: var(--p-muted);
+}
 
 /* ---------- story photos ---------- */
 .story-photos {

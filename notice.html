@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>POINTER —> 공지</title>
+<link rel="stylesheet" href="styles.css?v=2" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav__left">
+    <a class="nav__brand" href="index.html">POINTER</a>
+    <div class="nav__lang">
+      <a href="#" aria-current="page">한국어</a><span>/</span><a href="notice.en.html">English</a>
+    </div>
+  </div>
+  <div class="nav__links">
+    <a href="index.html">소개</a>
+    <a href="products.html">제품</a>
+    <a href="notice.html" aria-current="page">공지</a>
+    <a href="contact.html">문의</a>
+  </div>
+</nav>
+
+<section class="section">
+  <h1 class="shop-title">공지사항</h1>
+  <button class="logo-card" type="button" id="madaCard">
+    <img class="logo-img" src="mada-logo.png" alt="마다" />
+  </button>
+  <p class="contact-hint">제품을 선택하면 공지사항이 열려요</p>
+</section>
+
+<div class="modal modal--faq" id="madaModal" aria-hidden="true">
+  <div class="modal__panel">
+    <button class="modal__close" id="modalClose" type="button" aria-label="닫기">×</button>
+    <div class="modal__head">
+      <img class="modal__logo" src="mada-logo.png" alt="마다" />
+      <a class="store-badge-link" href="https://apps.apple.com/kr/app/mada-%EB%A7%88%EB%8B%A4/id6800627725" target="_blank" rel="noopener noreferrer">
+        <img class="store-badge" src="app-store-badge-ko.svg" alt="App Store에서 다운로드" />
+      </a>
+    </div>
+    <p class="modal__sub">공지사항</p>
+
+    <div class="policies" id="noticeList">
+      <p class="notice-empty">아직 등록된 공지사항이 없습니다.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var modal = document.getElementById("madaModal");
+    var card = document.getElementById("madaCard");
+    var close = document.getElementById("modalClose");
+
+    function updateHash(open) {
+      var base = location.pathname + location.search;
+      var url = open ? base + "#mada" : base;
+      if (location.hash !== (open ? "#mada" : "")) {
+        history.pushState(null, "", url);
+      }
+    }
+
+    function setOpen(open, syncUrl) {
+      modal.classList.toggle("open", open);
+      modal.setAttribute("aria-hidden", String(!open));
+      document.body.style.overflow = open ? "hidden" : "";
+      if (syncUrl !== false) updateHash(open);
+    }
+
+    card.addEventListener("click", function () { setOpen(true); });
+    close.addEventListener("click", function () { setOpen(false); });
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) setOpen(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") setOpen(false);
+    });
+    window.addEventListener("popstate", function () {
+      setOpen(location.hash === "#mada", false);
+    });
+
+    if (location.hash === "#mada") setOpen(true, false);
+  })();
+</script>
+
+</body>
+</html>
