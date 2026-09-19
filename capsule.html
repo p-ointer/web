@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mada - 타임캡슐 공유</title>
+    <title>Mada</title>
+    
+    <!-- 카카오톡 미리보기 설정 (로고 이미지 경로가 서버 주소와 맞는지 확인!) -->
+    <meta property="og:title" content="Mada 타임캡슐이 공유됐어요!">
+    <meta property="og:description" content="링크를 눌러 이야기를 확인해 보세요!">
+    <meta property="og:image" content="https://point-mada.com/mada-logo.png"> 
+    <meta property="og:url" content="https://point-mada.com/">
 </head>
 <body>
     <script>
-        // URL 파라미터에서 캡슐 ID 추출
+        // URL 파라미터에서 캡슐 ID 가져오기
         const urlParams = new URLSearchParams(window.location.search);
         const capsuleId = urlParams.get('id');
 
@@ -17,7 +23,7 @@
         // 1. 앱 실행 시도
         window.location.href = appScheme;
 
-        // 2. 1.5초 동안 앱이 안 켜지면 앱스토어로 이동 (미설치 유저)
+        // 2. 1.5초 후 앱이 안 켜지면 앱스토어로 이동
         setTimeout(function() {
             window.location.href = appStoreUrl;
         }, 1500);
