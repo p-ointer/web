@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mada - 타임캡슐 공유</title>
+</head>
+<body>
+    <script>
+        // URL 파라미터에서 캡슐 ID 추출
+        const urlParams = new URLSearchParams(window.location.search);
+        const capsuleId = urlParams.get('id');
+
+        const appScheme = capsuleId ? `mada://capsule/${capsuleId}` : `mada://`;
+        const appStoreUrl = "https://apps.apple.com/kr/app/mada-%EB%A7%88%EB%8B%A4/id6800627725";
+
+        // 1. 앱 실행 시도
+        window.location.href = appScheme;
+
+        // 2. 1.5초 동안 앱이 안 켜지면 앱스토어로 이동 (미설치 유저)
+        setTimeout(function() {
+            window.location.href = appStoreUrl;
+        }, 1500);
+    </script>
+</body>
+</html>
